@@ -22,14 +22,14 @@ public class TicketMachine {
     public void inserir(int quantia) throws PapelMoedaInvalidaException {
         boolean achou = false;
         for (int i = 0; i < papelMoeda.length && !achou; i++) {
-            if (papelMoeda[1] == quantia) {
+            if (papelMoeda[1] == quantia) { // Dados, esta acessando indice pelo numero 1 e nao pelo i 
                 achou = true;
             }
         }
         if (!achou) {
             throw new PapelMoedaInvalidaException();
         }
-        this.saldo += quantia;
+        this.saldo += quantia; // Excesso, esse codigo poderia estar dentro do if de quantia encontrada 
     }
 
     public int getSaldo() {
@@ -45,7 +45,7 @@ public class TicketMachine {
             throw new SaldoInsuficienteException();
         }
         String result = "*****************\n";
-        result += "*** R$ " + saldo + ",00 ****\n";
+        result += "*** R$ " + saldo + ",00 ****\n"; // Erro de Computacao, conversao de inteiro para string 
         result += "*****************\n";
         return result;
     }
