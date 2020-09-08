@@ -37,7 +37,7 @@ public class TicketMachine {
     }
 
     public Iterator<Integer> getTroco() {
-        return null;
+        return null; // Comissao, codigo diferente da documentacao 
     }
 
     public String imprimir() throws SaldoInsuficienteException {
